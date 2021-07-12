@@ -10,7 +10,7 @@ get '/sendhelp' do
 end
 
 get '/cat' do
-    "<img src='https://i.imgur.com/jFaSxym.png' alt='Cute kitten!' style='border: 1px dashed red'>"
+    erb(:index)
 end
 
 get '/secret' do
