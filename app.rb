@@ -10,6 +10,7 @@ get '/sendhelp' do
 end
 
 get '/cat' do
+    @name = ["Apocalypse", "Abyss", "Rainbow", "Bean"].sample
     erb(:index)
 end
 
