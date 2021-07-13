@@ -1,2 +1,14 @@
-<h1>"Hello my name is <%= @name %>"</h1>
-<img src='https://i.imgur.com/jFaSxym.png' alt='Cute kitten!' style='border: 1px dashed red'>
+
+<% if @name.nil? %>
+    <form action="/form" method="post">
+        <h1>What is this kittens name?</h1>
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>  
+<% end %>
+
+<% if @name%>
+    <h1>Hello, my name is <%= @name %>!</h1>
+    <img src="https://i.imgur.com/jFaSxym.png" alt="Cute kitten!" style="border: 1px dashed red">
+<% end %>
+

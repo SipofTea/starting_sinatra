@@ -9,9 +9,19 @@ get '/sendhelp' do
     "It's dangerous to go alone, take this!"
 end
 
-get '/cat' do
-    @name = ["Apocalypse", "Abyss", "Rainbow", "Bean"].sample
+get '/random-cat' do
+    @name = ["Apocalypse", "Abyss", "Rainbow", "Bean", "Potato", "Hashbrown", "Lord Snuggles", "Kuhiu"].sample
     erb(:index)
+end
+
+post '/named-cat' do
+    p params
+    @name = params[:name]
+    erb(:index)
+end
+
+get '/form' do
+    erb(:form)
 end
 
 get '/secret' do
